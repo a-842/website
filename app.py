@@ -18,26 +18,33 @@ def projects():
 
 @app.route('/blog')
 def blogs():
-    """List all blog posts"""
+        """List all blog posts (Markdown & HTML)"""
     try:
         blog_posts = [
-            f[:-5] for f in os.listdir(BLOGS_DIR) if f.endswith('.html')
+            f.rsplit(".", 1)[0] for f in os.listdir(BLOGS_DIR) if f.endswith(('.html', '.md'))
         ]
     except FileNotFoundError:
         blog_posts = []
     return render_template('blogs.html', blogs=blog_posts)
 
 @app.route('/blog/<post>')
-def blog_post(post):
-    """Render a specific blog post"""
-    blog_path = os.path.join(BLOGS_DIR, f"{post}.html")
-    if not os.path.exists(blog_path):
-        abort(404)
-    
-    with open(blog_path, "r", encoding="utf-8") as file:
-        content = file.read()
-    
-    return render_template('blog_post.html', title=post.replace("_", " ").title(), content=content)
+"""Render a specific blog post (Markdown or HTML)"""
+    md_path = os.path.join(BLOGS_DIR, f"{post}.md")
+    html_path = os.path.join(BLOGS_DIR, f"{post}.html")
+
+    if os.path.exists(html_path):  # If HTML file exists, load it
+        with open(html_path, "r", encoding="utf-8") as file:
+            content = file.read()
+        return render_template('blog_post.html', title=post.replace("_", " ").title(), content=content)
+
+    elif os.path.exists(md_path):  # If Markdown file exists, convert it
+        with open(md_path, "r", encoding="utf-8") as file:
+            md_content = file.read()
+            html_content = markdown.markdown(md_content)  # Convert to HTML
+        return render_template('blog_post.html', title=post.replace("_", " ").title(), content=html_content)
+
+    else:
+        abort(404)  # If neither exists, return 404
 
 
 @app.route('/gallery')
