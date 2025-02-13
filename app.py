@@ -28,6 +28,7 @@ def blogs():
     return render_template('blogs.html', blogs=blog_posts)
 
 @app.route('/blog/<post>')
+def blog_post(post):
     #Render a specific blog post (Markdown or HTML
     md_path = os.path.join(BLOGS_DIR, f"{post}.md")
     html_path = os.path.join(BLOGS_DIR, f"{post}.html")
