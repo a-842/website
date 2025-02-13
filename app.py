@@ -1,14 +1,10 @@
-from flask import Flask, redirect, request
-import requests
+from flask import Flask
 
 app = Flask(__name__)
 
-WEB2_URL = "http://localhost:5001"  # Change to web2's actual address
-
-@app.route('/assassin/<path:subpath>')
-def proxy_to_web2(subpath):
-    web2_response = requests.get(f"{WEB2_URL}/{subpath}", params=request.args)
-    return (web2_response.text, web2_response.status_code, web2_response.headers.items())
+@app.route('/')
+def home():
+    return "This is Web1 (Main Site)"
 
 if __name__ == '__main__':
-    app.run(port=5000, host="0.0.0.0")
+    app.run(host='0.0.0.0', port=5000)
