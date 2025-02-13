@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: black;
+    color: orange;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+header {
+    padding: 10px;
+    border-bottom: 2px solid orange;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    color: orange;
+    text-decoration: none;
+    border: 1px solid orange;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: orange;
+    color: black;
+}
+
+main {
+    margin: 20px;
+}
+
+footer {
+    padding: 10px;
+    border-top: 2px solid orange;
+}
