@@ -18,7 +18,7 @@ def projects():
 
 @app.route('/blog')
 def blogs():
-    """List all blog posts (Markdown & HTML)"""
+    #List all blog posts (Markdown & HTML)#
     try:
         blog_posts = [
             f.rsplit(".", 1)[0] for f in os.listdir(BLOGS_DIR) if f.endswith(('.html', '.md'))
@@ -28,7 +28,7 @@ def blogs():
     return render_template('blogs.html', blogs=blog_posts)
 
 @app.route('/blog/<post>')
-"""Render a specific blog post (Markdown or HTML)"""
+    #Render a specific blog post (Markdown or HTML
     md_path = os.path.join(BLOGS_DIR, f"{post}.md")
     html_path = os.path.join(BLOGS_DIR, f"{post}.html")
 
