@@ -11,4 +11,4 @@ def proxy_to_web2(subpath):
     return (web2_response.text, web2_response.status_code, web2_response.headers.items())
 
 if __name__ == '__main__':
-    app.run(port=5000, host=0.0.0.0)
+    app.run(port=5000, host="0.0.0.0")
