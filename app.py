@@ -18,7 +18,7 @@ def projects():
 
 @app.route('/blog')
 def blogs():
-        """List all blog posts (Markdown & HTML)"""
+    """List all blog posts (Markdown & HTML)"""
     try:
         blog_posts = [
             f.rsplit(".", 1)[0] for f in os.listdir(BLOGS_DIR) if f.endswith(('.html', '.md'))
