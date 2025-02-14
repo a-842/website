@@ -5,40 +5,64 @@ body {
     color: orange;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    padding: 10px;
-    border-bottom: 2px solid orange;
+    padding: 20px;
+    border-bottom: 4px solid orange;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 10px;
 }
 
 nav a {
     color: orange;
     text-decoration: none;
-    border: 1px solid orange;
-    padding: 5px 10px;
+    border: 2px solid orange;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
 }
 
 nav a:hover {
     background-color: orange;
     color: black;
+    box-shadow: 0 0 10px orange;
 }
 
 main {
     margin: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
-    padding: 10px;
-    border-top: 2px solid orange;
+    padding: 20px;
+    border-top: 4px solid orange;
+    font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    nav a {
+        width: 80%;
+        text-align: center;
+    }
 }
