@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* for xonsistency*/
+/* for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -12,19 +13,23 @@ body {
   padding: 20px;
   background: #eee;
   color: #111;
-  font-family: 'VT323', monospace;
+  font-family: 'Arvo', serif;
 }
 
 main {
     max-width: 500px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
+    padding: 50px;
+    background: white;
+    border-radius: 8px;
 }
 
 nav {
     background: #f60;
     padding: 15px;
     width: 100%;
+    margin: 50px -50px 50px -50px;
 }
 nav ul {
     list-style: none;
@@ -50,7 +55,6 @@ nav a:hover {
 }
 
 /* Buttons */
-/* Button */
 button {
     padding: 10px 15px;
     background: #f6a;
@@ -66,50 +70,160 @@ button:hover {
 }
 
 /* Layout Elements */
-header {}
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-section {}
-article {}
-aside {}
-footer {}
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+article {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+aside {
+    background: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
 
 /* Text Elements */
-h1, h2, h3, h4, h5, h6 {}
-p {}
-blockquote {}
-cite {}
-address {}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'VT323', monospace;
+}
+
+p {
+    line-height: 1.6;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #f60;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+cite {
+    font-weight: bold;
+}
+
+address {
+    font-style: normal;
+    color: #555;
+}
 
 /* Media and Figures */
-figure {}
-figcaption {}
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+}
 
 /* Code & Preformatted Text */
-code {}
-pre {}
+code {
+    font-family: monospace;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+pre {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
 
 /* Emphasis & Highlights */
-em {}
-strong {}
-mark {}
+em {
+    font-style: italic;
+}
 
-time {}
+strong {
+    font-weight: bold;
+}
+
+mark {
+    background: yellow;
+    padding: 2px 4px;
+}
+
+time {
+    font-style: italic;
+    color: #555;
+}
 
 /* Table Elements */
-table {}
-thead {}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead {
+    background: #f60;
+    color: white;
+}
+
 tbody {}
-tfoot {}
-th {}
-tr {}
-td {}
+
+tfoot {
+    background: #ddd;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
 
 /* List Elements */
-ul {}
-ol {}
-li {}
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
 
 /* Description List */
-dl {}
-dt {}
-dd {}
+dl {
+    margin: 10px 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 20px;
+}
