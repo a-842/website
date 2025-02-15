@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Retro Hub{% endblock %}</title>
+    <title>{% block title %}acoult.art{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>MY ONLINE HUB</h1>
-        <p>Status: Always Tinkering...</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('references') }}">References</a></li>
-            <li><a href="{{ url_for('blogs') }}">Blog</a></li>
-            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-        </ul>
-    </nav>
-
     <main>
-        {% block content %}{% endblock %}
+        <header>
+            <h1>acoult.art/h1>
+            <p>Status: Always Tinkering...</p>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('references') }}">References</a></li>
+                <li><a href="{{ url_for('randoms') }}">Randoms</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            </ul>
+        </nav>
+    
+        <content>
+            {% block content %}{% endblock %}
+        </content>
+    
+        <footer>
+            <p>&copy; 2025 - acoult.art</p>
+        </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2025 - My Online Hub Hub</p>
-    </footer>
 </body>
 </html>
