@@ -17,7 +17,7 @@ body {
 }
 
 main {
-    max-width: 500px;
+    max-width: 800px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
     padding: 50px;
@@ -28,7 +28,6 @@ main {
 nav {
     background: #f60;
     padding: 15px;
-    width: 100%;
     margin: 50px -50px 50px -50px;
 }
 nav ul {
@@ -212,7 +211,8 @@ ul, ol {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    margin-top: 3px
 }
 
 /* Description List */
