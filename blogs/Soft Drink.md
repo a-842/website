@@ -4,8 +4,6 @@ After a short amount of research online, I came across a YouTube channel called 
 
 ## Ardon's Recipe
 
-  
-
 - 400g sugar
 - zest of 3 oranges
 - juice of 3 oranges
@@ -18,7 +16,8 @@ simmer
 
 1:10 syrup to water
 
-
+While This tasted really good, it wasn't what I was looking for - almost too real. Also, there was a lot of work and preperation required to make a small batch, which I got through very quickly.
+So I sought a better option.
 
 
 
