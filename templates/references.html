@@ -4,11 +4,45 @@
 
 {% block content %}
 <section>
-    <h2>Useful References</h2>
+    <h2 id="my-other-pages">My other Pages</h2>
+    <p>These are other tools or games I have made, mostly for personal use.</p>
     <ul>
-        <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
-        <li><a href="https://flask.palletsprojects.com/">Flask Documentation</a></li>
-        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+        <li><a href="assassin.acoult.art">Assassin Game</a></li>
+        <li><a href="qr.acoult.art">QR Explainer</a></li>
     </ul>
+    
+    <h2 id="useful-code-snippets">Useful code snippets</h2>
+    <p>Python Virtual Environments</p>
+    <ul>
+        <li><code>pip3 install venv</code></li>
+        <li><code>python3 venv env</code></li>
+        <li><code>source env/bin/activate</code></li>
+        <li><code>deactivate</code></li>
+    </ul>
+    <p>Reverse Proxy with nginx</p>
+    <ul>
+        <li><code>sudo apt update &amp;&amp; sudo apt install nginx</code></li>
+        <li><code>sudo systemctl start nginx</code></li>
+        <li><code>sudo rm /etc/nginx/sites-enabled/default</code></li>
+        <li><code>sudo nano /etc/nginx/conf.d/default.conf</code></li>
+        <li><pre><code class="lang-python">server {
+ <span class="hljs-section">listen</span> <span class="hljs-number">80</span> default_server;
+ return <span class="hljs-number">502</span>;
+}
+</code></pre>
+</li>
+        <li><pre><code class="lang-python">server {
+ <span class="hljs-keyword">listen</span> <span class="hljs-number">80</span>;
+ server_name <span class="hljs-function"><span class="hljs-keyword">sub</span>.<span class="hljs-title">domain</span>.<span class="hljs-title">tld</span></span>;
+ location / {
+     proxy_pass http:<span class="hljs-regexp">//localhost</span>:<span class="hljs-number">5000</span>;
+ }
+}
+</code></pre>
+        </li>
+        <li>sudo systemctl restart nginx</li>
+    </ul>
+    <h2 id="useful-websites">Useful Websites</h2>
+
 </section>
 {% endblock %}
