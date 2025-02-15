@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/** for xonsistency*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  padding: 20px;
+  background: #eee;
+  color: #111;
+  font-family: 'VT323', monospace;
+}
+
+main {
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Layout Elements */
+header {}
+nav {}
+section {}
+article {}
+aside {}
+footer {}
+
+/* Text Elements */
+h1, h2, h3, h4, h5, h6 {}
+p {}
+blockquote {}
+cite {}
+address {}
+
+/* Media and Figures */
+figure {}
+figcaption {}
+
+/* Code & Preformatted Text */
+code {}
+pre {}
+
+/* Emphasis & Highlights */
+em {}
+strong {}
+mark {}
+
+time {}
+
+/* Table Elements */
+table {}
+thead {}
+tbody {}
+tfoot {}
+th {}
+tr {}
+td {}
+
+/* List Elements */
+ul {}
+ol {}
+li {}
+
+/* Description List */
+dl {}
+dt {}
+dd {}
