@@ -143,20 +143,54 @@ figcaption {
 }
 
 /* Code & Preformatted Text */
+/* General code styling */
 code {
-    font-family: monospace;
-    background: #f4f4f4;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95em;
+    background-color: #f5f5f5;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Block code styling */
+pre {
+    background-color: #1e1e1e;  /* Dark background for contrast */
+    color: #dcdcdc;  /* Light text */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Scroll for long lines */
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Make sure <code> inside <pre> inherits styles */
+pre code {
+    background: none;
+    color: inherit;
+    font-size: 1em;
+}
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95em;
+    background-color: #ddd;
     padding: 2px 5px;
     border-radius: 3px;
 }
 
 pre {
-    background: #222;
-    color: #fff;
+    background-color: #111;  
+    color: #eee;
     padding: 10px;
     border-radius: 5px;
-    overflow-x: auto;
+    overflow-x: auto; 
+    font-family: "Courier New", Courier, monospace;
 }
+
+pre code {
+    background: none;
+    color: inherit;
+    font-size: 1em;
+}
+
 
 /* Emphasis & Highlights */
 em {
