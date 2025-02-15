@@ -10,8 +10,9 @@
         <li><a href="assassin.acoult.art">Assassin Game</a></li>
         <li><a href="qr.acoult.art">QR Explainer</a></li>
     </ul>
-    
-    <h2 id="useful-code-snippets">Useful code snippets</h2>
+</section>
+<section>
+    <h2>Useful code snippets</h2>
     <p>Python Virtual Environments</p>
     <ul>
         <li><code>pip3 install venv</code></li>
@@ -25,24 +26,31 @@
         <li><code>sudo systemctl start nginx</code></li>
         <li><code>sudo rm /etc/nginx/sites-enabled/default</code></li>
         <li><code>sudo nano /etc/nginx/conf.d/default.conf</code></li>
-        <li><pre><code class="lang-python">server {
- <span class="hljs-section">listen</span> <span class="hljs-number">80</span> default_server;
- return <span class="hljs-number">502</span>;
+        <li><pre><code>server {
+ listen 80 default_server;
+ return 502;
 }
 </code></pre>
 </li>
-        <li><pre><code class="lang-python">server {
- <span class="hljs-keyword">listen</span> <span class="hljs-number">80</span>;
- server_name <span class="hljs-function"><span class="hljs-keyword">sub</span>.<span class="hljs-title">domain</span>.<span class="hljs-title">tld</span></span>;
+        <li><pre><code>server {
+ listen 80;
+ server_name sub.domain.tld;
  location / {
-     proxy_pass http:<span class="hljs-regexp">//localhost</span>:<span class="hljs-number">5000</span>;
+     proxy_pass http: http://localhost: 5000;
  }
 }
 </code></pre>
         </li>
         <li>sudo systemctl restart nginx</li>
     </ul>
+</section>
+<section>
     <h2 id="useful-websites">Useful Websites</h2>
-
+    <dl>
+        <dt>12ft.io/</dt>
+        <dd>Append this before a url to remove paywalls on articles</dd>
+        <dt>More Will Definatly be added</dt>
+        <dd>Another description</dd>
+    </dl>
 </section>
 {% endblock %}
