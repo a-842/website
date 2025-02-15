@@ -13,12 +13,8 @@ def home():
 def references():
     return render_template('references.html')
 
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
-
-@app.route('/blog')
-def blogs():
+@app.route('/randoms')
+def randoms():
     #List all blog posts (Markdown & HTML)#
     try:
         blog_posts = [
