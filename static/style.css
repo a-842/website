@@ -19,9 +19,54 @@ main {
   max-width: 500px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+nav {
+    background: #f60;
+    padding: 15px;
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+}
+nav a {
+    color: #111;
+    padding: 10px 15px;
+    border: 2px solid #111;
+    transition: 0.3s ease-in-out;
+    font-size: 22px;
+}
+
+nav a:hover {
+    background: #eee;
+    color: #111;
+}
+
+/* Buttons */
+/* Button */
+button {
+    padding: 10px 15px;
+    background: #f6a;
+    color: black;
+    border: 2px solid black;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: darkorange;
+}
+
 /* Layout Elements */
 header {}
-nav {}
+
 section {}
 article {}
 aside {}
