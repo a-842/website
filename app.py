@@ -5,6 +5,10 @@ import markdown
 app = Flask(__name__)
 BLOGS_DIR="blogs"
 
+@app.route('/ads.txt')
+def ads():
+    return render_template('ads.txt')
+
 @app.route('/')
 def home():
     return render_template('index.html')
