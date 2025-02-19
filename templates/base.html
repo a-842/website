@@ -10,11 +10,6 @@
 </head>
 <body>
     <main>
-        <header>
-            <h1>acoult.art</h1>
-            <p>Status: Always Tinkering...</p>
-        </header>
-    
         <nav>
             <ul>
                 <li><a href="{{ url_for('home') }}">{% if request.endpoint == 'home' %}> {% else %}  {% endif %}Home</a></li>
@@ -23,10 +18,12 @@
                 <li><a href="{{ url_for('gallery')}}">{% if request.endpoint == 'gallery' %}> {% else %}  {% endif %}Gallery</a></li>
             </ul>
         </nav>
-    
-        <content>
-            {% block content %}{% endblock %}
-        </content>
+        
+        <header>
+            <h1>acoult.art</h1>
+        </header>
+        
+        {% block content %}{% endblock %}
     
         <footer>
             <p>&copy; 2025 - acoult.art</p>
