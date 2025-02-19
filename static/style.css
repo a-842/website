@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* for consistency */
@@ -11,17 +10,15 @@
 /* General Styles */
 body {
   padding: 20px;
-  background: #222;
+  background: #111;
   color: #eee;
   font-family: 'Arvo', serif;
 }
 
 main {
     max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: auto;
     padding: 50px;
-    border-radius: 8px;
 }
 
 nav {
@@ -30,12 +27,11 @@ nav {
     left: 0;
     width: auto;
     height: 100vh;
-    background-color: #222;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 nav ul {
@@ -52,30 +48,10 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 10px;
-    color: white;
     text-decoration: none;
-    border-radius: 5px;
     transition: background 0.3s;
 }
 
-nav ul li a:hover {
-    font-size: 1.5em;
-}
-
-/* Buttons */
-button {
-    padding: 10px 15px;
-    background: #f6a;
-    color: black;
-    border: 2px solid black;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: darkorange;
-}
 
 /* Layout Elements */
 header {
@@ -110,6 +86,7 @@ h2 {
 
 p {
     line-height: 1.6;
+    margin-top: 5px;
 }
 
 /* Code & Preformatted Text */
@@ -117,56 +94,25 @@ p {
 code {
     font-family: "Courier New", Courier, monospace;
     font-size: 0.95em;
-    background-color: #f5f5f5;
+    background-color: black;
     padding: 2px 5px;
     border-radius: 3px;
 }
 
 /* Block code styling */
 pre {
-    background-color: #1e1e1e;  /* Dark background for contrast */
-    color: #dcdcdc;  /* Light text */
+    background-color: black;  
     padding: 10px;
     border-radius: 5px;
-    overflow-x: auto; /* Scroll for long lines */
+    overflow-x: auto;
     font-family: "Courier New", Courier, monospace;
 }
 
 /* Make sure <code> inside <pre> inherits styles */
 pre code {
     background: none;
-    color: inherit;
     font-size: 1em;
 }
-code {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.95em;
-    background-color: #111;
-    padding: 2px 5px;
-    border-radius: 3px;
-}
-
-pre {
-    background-color: #111;  
-    color: #eee;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto; 
-    font-family: "Courier New", Courier, monospace;
-}
-
-pre code {
-    background: none;
-    color: inherit;
-    font-size: 1em;
-}
-
-section img {
-    width: 100%;
-    height: auto;
-    
-}
-
 
 
 /* Table Elements */
