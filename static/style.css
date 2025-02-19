@@ -47,7 +47,6 @@ nav ul {
 
 nav ul li {
     width: 100%;
-    text-align: center;
 }
 
 nav ul li a {
@@ -60,7 +59,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #444;
+    font-size: 1.5em;
 }
 
 /* Buttons */
@@ -142,7 +141,7 @@ pre code {
 code {
     font-family: "Courier New", Courier, monospace;
     font-size: 0.95em;
-    background-color: #ddd;
+    background-color: #111;
     padding: 2px 5px;
     border-radius: 3px;
 }
@@ -168,24 +167,7 @@ section img {
     
 }
 
-/* Emphasis & Highlights */
-em {
-    font-style: italic;
-}
 
-strong {
-    font-weight: bold;
-}
-
-mark {
-    background: yellow;
-    padding: 2px 4px;
-}
-
-time {
-    font-style: italic;
-    color: #555;
-}
 
 /* Table Elements */
 table {
