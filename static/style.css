@@ -89,24 +89,9 @@ header {
 section {
     margin-bottom: 20px;
     padding: 20px;
-    background: #f9f9f9;
     border-radius: 8px;
 }
 
-article {
-    padding: 15px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-aside {
-    background: #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
 
 footer {
     background: #333;
@@ -126,33 +111,6 @@ h2 {
 
 p {
     line-height: 1.6;
-}
-
-blockquote {
-    font-style: italic;
-    border-left: 4px solid #f60;
-    padding-left: 10px;
-    margin-left: 10px;
-}
-
-cite {
-    font-weight: bold;
-}
-
-address {
-    font-style: normal;
-    color: #555;
-}
-
-/* Media and Figures */
-figure {
-    text-align: center;
-    margin: 20px 0;
-}
-
-figcaption {
-    font-size: 0.9em;
-    color: #666;
 }
 
 /* Code & Preformatted Text */
