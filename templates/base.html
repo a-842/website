@@ -17,10 +17,10 @@
     
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">{% if request.endpoint == 'home' %}> {% endif %}Home</a></li>
-                <li><a href="{{ url_for('references')}}">{% if request.endpoint == 'references' %}> {% endif %}References</a></li>
-                <li><a href="{{ url_for('randoms')}}">{% if request.endpoint == 'randoms' %}> {% endif %}Randoms</a></li>
-                <li><a href="{{ url_for('gallery')}}">{% if request.endpoint == 'gallery' %}> {% endif %}Gallery</a></li>
+                <li><a href="{{ url_for('home') }}">{% if request.endpoint == 'home' %}> {% else %}  {% endif %}Home</a></li>
+                <li><a href="{{ url_for('references')}}">{% if request.endpoint == 'references' %}> {% else %}  {% endif %}References</a></li>
+                <li><a href="{{ url_for('randoms')}}">{% if request.endpoint == 'randoms' %}> {% else %}  {% endif %}Randoms</a></li>
+                <li><a href="{{ url_for('gallery')}}">{% if request.endpoint == 'gallery' %}> {% else %}  {% endif %}Gallery</a></li>
             </ul>
         </nav>
     
