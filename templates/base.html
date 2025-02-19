@@ -17,10 +17,11 @@
     
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('references') }}">References</a></li>
-                <li><a href="{{ url_for('randoms') }}">Randoms</a></li>
-                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('references') }}" class="{% if request.endpoint == 'references' %}active{% endif %}">References</a></li>
+                <li><a href="{{ url_for('randoms') }}" class="{% if request.endpoint == 'randoms' %}active{% endif %}">Randoms</a></li>
+                <li><a href="{{ url_for('gallery') }}" class="{% if request.endpoint == 'gallery' %}active{% endif %}">Gallery</a></li>
+
             </ul>
         </nav>
     
