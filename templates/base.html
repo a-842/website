@@ -30,4 +30,20 @@
         </footer>
     </main>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  let scrollTimeout;
+
+  window.addEventListener("scroll", function () {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      window.scrollTo({
+        top: window.scrollY,
+        behavior: "smooth",
+      });
+    }, 50); // Adjust delay as needed
+  });
+});
+
+</script>
 </html>
