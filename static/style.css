@@ -34,14 +34,6 @@ nav {
     /*align-items: center;*/
 }
 
-@media (max-width: 768px) {
-    nav {
-        width: 100%;
-        height: auto;
-        position: static;
-        text-align: center;
-    }
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -94,32 +86,29 @@ p {
     margin-top: 5px;
 }
 
-
-
-a {
-  color: #66ccff; /* A soft blue for links */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-pre {
-  background: #222; /* Slightly lighter than the background */
-  color: #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
-  font-family: monospace;
-}
-
+/* Code & Preformatted Text */
+/* General code styling */
 code {
-  background: #222;
-  color: #ddd;
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-family: monospace;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95em;
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Block code styling */
+pre {
+    background-color: black;  
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Make sure <code> inside <pre> inherits styles */
+pre code {
+    background: none;
+    font-size: 1em;
 }
 
 
