@@ -63,7 +63,13 @@ nav ul li a {
 header {
     text-align: center;
     padding: 20px;
+  
 }
+header a {
+  text-decoration: none;
+  color: #eee;
+}
+
 
 section {
     margin-bottom: 20px;
@@ -173,4 +179,14 @@ dt {
 
 dd {
     margin-left: 20px;
+}
+
+a{
+  color: lightskyblue;
+}
+a:visited {
+  color: #6d4b8d;
+}
+a:hover {
+  color: #eee;
 }
