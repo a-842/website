@@ -45,7 +45,34 @@
     </ul>
 </section>
 <section>
-    <h2 id="useful-websites">Useful Websites</h2>
+    <h2>Standard Code</h2>
+    <h3>Sorting</h3>
+    <pre><code>
+def bubble_sort(array:list, descending:bool=False) -> list:
+  sorted = True
+  for i in range(len(array)-1):
+    for j in range(len(array)-1-i):
+      if (array[j] > array[j+1]) ^ descending:
+        array[j], array[j+1] = array[j+1], array[j]
+        sorted = False
+    if sorted:
+      break
+  return array
+    </code></pre>
+    <pre><code>
+def insertion_sort(array:list, descending:bool=False) -> list:
+    for i in range(1, len(array)):
+        currentValue = array[i]
+        position = i
+        while position > 0 and ((array[position - 1] > currentValue) ^ descending):
+            array[position] = array[position - 1]
+            position = position - 1
+        array[position] = currentValue
+    return array
+    </code></pre>
+</section>
+<section>
+    <h2>Useful Websites</h2>
     <dl>
         <dt>12ft.io/</dt>
         <dd>Append this before a url to remove paywalls on articles</dd>
