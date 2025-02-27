@@ -47,20 +47,18 @@
 <section>
     <h2>Standard Code</h2>
     <h3>Sorting</h3>
-    <pre><code>
-def bubble_sort(array:list, descending:bool=False) -> list:
-  sorted = True
-  for i in range(len(array)-1):
-    for j in range(len(array)-1-i):
-      if (array[j] > array[j+1]) ^ descending:
-        array[j], array[j+1] = array[j+1], array[j]
-        sorted = False
-    if sorted:
-      break
-  return array
-    </code></pre>
-    <pre><code>
-def insertion_sort(array:list, descending:bool=False) -> list:
+    <pre><code>def bubble_sort(array:list, descending:bool=False) -> list:
+    sorted = True
+    for i in range(len(array)-1):
+        for j in range(len(array)-1-i):
+            if (array[j] > array[j+1]) ^ descending:
+                array[j], array[j+1] = array[j+1], array[j]
+                sorted = False
+        if sorted:
+            break
+    return array</code></pre>
+
+    <pre><code>def insertion_sort(array:list, descending:bool=False) -> list:
     for i in range(1, len(array)):
         currentValue = array[i]
         position = i
@@ -68,8 +66,68 @@ def insertion_sort(array:list, descending:bool=False) -> list:
             array[position] = array[position - 1]
             position = position - 1
         array[position] = currentValue
-    return array
-    </code></pre>
+    return array</code></pre>
+
+    <pre><code>def quick_sort(array:list, descending:bool=False) -> list:
+    if len(array) <= 1: return array
+    pivot = array.pop(round(len(array) / 2))
+    before_list = [x for x in array if (x < pivot) ^ descending]
+    after_list = [x for x in array if (x >= pivot) ^ descending]
+    sorted_list = quick_sort(before_list, descending) + [pivot] + quick_sort(after_list, descending)
+    return sorted_list</code></pre>
+
+    <pre><code>def merge_sort(array: list, descending: bool = False) -> list:
+    if len(array) <= 1: return array
+    left = merge_sort(array[:len(array)//2], descending)
+    right = merge_sort(array[len(array)//2:], descending)
+    return merge(left, right, descending)
+
+def merge(a, b, descending):
+    result = []
+    i = j = 0
+    while i < len(a) and j < len(b):
+        if (a[i] < b[j]) ^ descending:
+            result.append(a[i])
+            i += 1
+        else:
+            result.append(b[j])
+            j += 1
+    result.extend(a[i:])
+    result.extend(b[j:])
+    return result
+</code></pre>
+<pre><code>def binary_search(item, array, not_found=None):
+  """Performs a binary search on a sorted array.
+
+    This function searches for a given item in a sorted array using the binary search algorithm.
+    It works with both ascending and descending ordered arrays.
+
+    Args:
+        item: The element to search for in the array.
+        array (list): A sorted list of elements (either in ascending or descending order).
+        not_found (optional): The value to return if the item is not found. Defaults to None.
+
+    Returns:
+        int or any: The index of the item if found, otherwise the `not_found` value (defaulted to None).
+
+    Raises:
+        IndexError: If the array is empty.
+    """
+  if not array:
+        raise IndexError("Array must not be empty.")
+  descending = array[0] > array[-1]
+  first = 0
+  last = len(array)-1
+  while first <= last:
+    current = (first+last)//2
+    if item == array[current]: return current
+    if (item > array[current]) ^ descending:
+      first = current+1
+    else:
+      last = current-1
+  return not_found</code></pre>
+
+
 </section>
 <section>
     <h2>Useful Websites</h2>
