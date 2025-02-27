@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-
-/* for consistency */
+/* Reset and Consistency */
 * {
     margin: 0;
     padding: 0;
@@ -14,36 +13,34 @@ html {
 
 /* General Styles */
 body {
-  padding: 20px;
-  background: #111;
-  color: #eee;
-  font-family: 'Arvo', serif;
+    padding: 30px;
+    background: #111;
+    color: #eee;
+    font-family: 'Arvo', serif;
 }
 
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
-    padding: 50px;
+    padding: 60px 40px;
 }
 
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: auto;
+    width: 220px;
     height: 100vh;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    width: 100%;
 }
 
 nav ul li {
@@ -52,98 +49,76 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 10px;
+    padding: 12px 15px;
     text-decoration: none;
     transition: background 0.3s;
     color: #eee;
 }
 
-
 /* Layout Elements */
 header {
     text-align: center;
-    padding: 20px;
-  
+    padding: 30px;
 }
+
 header a {
-  text-decoration: none;
-  color: #eee;
+    text-decoration: none;
+    color: #eee;
 }
 
-
+/* Sections */
 section {
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 30px;
+    padding: 25px;
     border-radius: 8px;
 }
 
-
+/* Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 /* Text Elements */
 h1 {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 h2 {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 p {
-    line-height: 1.6;
-    margin-top: 5px;
+    line-height: 1.8;
+    margin-top: 8px;
 }
 
 /* Code & Preformatted Text */
-/* General code styling */
 code {
     font-family: "Courier New", Courier, monospace;
     font-size: 0.95em;
     background-color: black;
-    padding: 2px 5px;
+    padding: 3px 6px;
     border-radius: 3px;
 }
 
-/* Block code styling */
 pre {
-    background-color: black;  
-    padding: 10px;
-    border-radius: 5px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 6px;
     overflow-x: auto;
-    font-family: "Courier New", Courier, monospace;
 }
 
-/* Make sure <code> inside <pre> inherits styles */
-pre code {
-    background: none;
-    font-size: 1em;
-}
-
-
-/* Table Elements */
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-}
-
-thead {
-    background: #f60;
-    color: white;
-}
-
-tbody {}
-
-tfoot {
-    background: #ddd;
+    margin: 25px 0;
 }
 
 th, td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 12px;
     text-align: left;
 }
 
@@ -151,42 +126,35 @@ tr:nth-child(even) {
     background: #222;
 }
 
-/* List Elements */
+/* Lists */
 ul, ol {
-    margin-left: 20px;
-    list-style-type: none;
+    margin-left: 25px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
 }
 
 ul li:before {
-  content: '>';
-  position: absolute;
-  margin-left: -20px;
+    content: '>';
+    position: absolute;
+    left: 0;
 }
 
 li {
-    margin-bottom: 3px;
-    margin-top: 3px
+    margin: 5px 0;
 }
 
-/* Description List */
-dl {
-    margin: 10px 0;
+/* Links */
+a {
+    color: lightskyblue;
 }
 
-dt {
-    font-weight: bold;
-}
-
-dd {
-    margin-left: 20px;
-}
-
-a{
-  color: lightskyblue;
-}
 a:visited {
-  color: #6d4b8d;
+    color: #6d4b8d;
 }
+
 a:hover {
-  color: #eee;
+    color: #eee;
 }
