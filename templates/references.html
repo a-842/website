@@ -96,6 +96,17 @@ def merge(a, b, descending):
     result.extend(b[j:])
     return result
 </code></pre>
+<pre><code>from random import randint, shuffle
+from time import Time
+
+def bogo_sort(array):
+    while not all(array[i]<=array[i+1] for i in range(len(array)-1)):
+        shuffle(array)
+    return array
+
+print(list := [randint(0,100) for i in range(8)])
+print(bogo_sort(list))
+</code></pre>
     <h3>Searching</h3>
 <pre><code>def binary_search(item, array, check_repeats=False, not_found=None):
     """
